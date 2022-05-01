@@ -165,14 +165,14 @@ class Character(Resource):
                     return {'Error': 'Name does not exist for character.'}, 400
 
                 lst = result[0]['characterStats']
-                headers = ['Level', 'Attack', 'Secondary Stats']
+                headers = ['Level', 'HP', 'Attack', 'DEF', 'Secondary Stats']
                 new_lst = stats_parser(headers, lst)
                 result[0]['characterStats'] = new_lst
                 return result[0], 200
 
             data = [i for i in Database.get('SELECT * FROM characters ')]
             result = [dict(row) for row in data]
-            headers = ['Level', 'Attack', 'Secondary Stats']
+            headers = ['Level', 'HP', 'Attack', 'DEF', 'Secondary Stats']
 
             for dicts in result:
                 new_lst = stats_parser(headers, dicts['characterStats'])
@@ -190,5 +190,5 @@ api.add_resource(Artifact, '/api/artifacts', endpoint='artifacts')
 
 if __name__ == '__main__':
     certs = ('cert.pem', 'key.pem')
-    # app.run()
+    #app.run()
     app.run(host=yaml_data['HOST'], port=yaml_data['PORT'], ssl_context=certs)
