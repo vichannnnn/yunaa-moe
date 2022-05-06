@@ -1,5 +1,5 @@
 # Yuna API
-RESTful API for retrieving minimalistic yet essential Genshin Impact data such as stats and their level scaling.
+Minimalist RESTful API for retrieving essential Genshin Impact data such as characters' and weapons' stats and their scaling.
 
 <a href="https://github.com/vichannnnn/yunaa-moe/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/synverse/ProblemSolverAssistant?style=for-the-badge"></a>
 
