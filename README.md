@@ -4,7 +4,7 @@ Minimalist RESTful API for retrieving essential Genshin Impact data such as char
 <a href="https://github.com/vichannnnn/yunaa-moe/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/synverse/ProblemSolverAssistant?style=for-the-badge"></a>
 
 Check out the API's [Wiki](https://github.com/vichannnnn/yunaa-moe/wiki) page to get started on Yuna API.
-
+Alternatively, you can also check out our [website](https://yunaa.moe)!
 ## Credits
 
 This API gathered data from the following sources:
