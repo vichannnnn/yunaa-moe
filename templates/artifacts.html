@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Yuna - Artifacts</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+	</head>
+    <div id="loader">
+	    <picture>
+	      <img class="limg" src="/static/images/loading.gif" alt="">
+	    </picture>
+	</div>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<span class="symbol"><img src="/static/images/Element_Electro.svg" alt="" /></span><span class="title">Yuna</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/about">About</a></li>
+                            <li><a href="/getting_started">Getting Started</a></li>
+							<li><a href="/documentations">Documentations</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Artifacts</h1>
+                            <h2>Artifacts HTTP GET Request Method</h2>
+                            <p>Gets the data of all the available artifact sets.</p>
+                            <pre><code>GET https://yunaa.moe/api/artifacts/</code></pre>
+                            <h2>Parameterized Artifact HTTP GET Request Method</h2>
+                            <p>Gets the data of a specific artifact set.</p>
+                            <p>Currently, the supported parameters are:</p>
+                            <!-- Table -->
+								<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Parameter</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>name</td>
+													<td>Name of the artifact set.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                </section>
+                            <h3>Example Request</h3>
+                            <pre><code>GET https://yunaa.moe/api/artifacts?name=Gambler</code></pre>
+                            <h3>Example Response</h3>
+                            <pre><code>{
+"setName": "Gambler",
+"artifactOrigin": "Gambler is an Artifact Set available at 3-star and 4-star rarities which can be obtained from The Lost Valley, Clear Pool and Mountain Cavern and Peak of Vindagnyr.",
+"imageLink": "https://static.wikia.nocookie.net/gensin-impact/images/3/39/Item_Gambler%27s_Brooch.png/revision/latest?cb=20201120062914",
+"wikiLink": "/wiki/Gambler",
+"setEffect": {
+"2 Set Effect": " Increases Elemental Skill DMG by 20%.",
+"4 Set Effect": "Defeating an opponent has 100% chance to remove Elemental Skill CD. Can only occur once every 15s.\n"
+}
+}</code></pre>
+                             <h3>Response Parameters</h3>
+                                    <!-- Table -->
+								<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Type</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>setName</td>
+													<td>Name of the artifact set.</td>
+												</tr>
+                                            <tr>
+													<td>artifactOrigin	</td>
+													<td>The known ways to obtain the artifact set.</td>
+												</tr>
+                                            <tr>
+													<td>imageLink</td>
+													<td>The image of the artifact set, specifically only the flower part.</td>
+												</tr>
+                                            <tr>
+													<td>wikiLink</td>
+													<td>The Genshin Wikia link of the artifact set.</td>
+												</tr>
+                                            <tr>
+													<td>setEffect</td>
+                                                <td>Shows a key-value pair of <code>2 Set Effect</code> and <code>4 Set Effect</code></td>
+												</tr>
+                                            <tr>
+													<td>2 Set Effect</td>
+													<td>The set effect description of the 2-Set Effect.</td>
+												</tr>
+                                            <tr>
+													<td>4 Set Effect</td>
+													<td>The set effect description of the 4-Set Effect.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                </section>
+                        </div>
+                    </div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/vichannnnn/yunaa-moe" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Violet Cloud. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -3,3 +3,5 @@ security.py
 *.db
 authentication_example.py
 credentials.yaml
+static
+auths

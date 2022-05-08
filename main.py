@@ -1,5 +1,5 @@
 import traceback
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_restful import Resource, Api
 from marshmallow import Schema, fields
 from flask_cors import CORS
@@ -12,13 +12,14 @@ import yaml
 with open("credentials.yaml", "r", encoding="utf8") as stream:
     yaml_data = yaml.safe_load(stream)
 
+
 class APISchema(Schema):
     name = fields.Str(required=False, default=None)
     type = fields.Str(required=False, default=None)
 
 
 app = Flask(__name__)
-app.secret_key = ''
+app.secret_key = yaml_data['SECRET_KEY']
 api = Api(app)
 schema = APISchema()
 CORS(app)
@@ -53,6 +54,39 @@ def stats_parser(header: [], lst_of_lst: []):
         lst[n] = dict(new_data)
 
     return lst
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/characters')
+def characters():
+    return render_template('characters.html')
+
+@app.route('/weapons')
+def weapons():
+    return render_template('weapons.html')
+
+@app.route('/artifacts')
+def artifacts():
+    return render_template('artifacts.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/getting_started')
+def getting_started():
+    return render_template('getting_started.html')
+
+@app.route('/documentations')
+def documentations():
+    return render_template('documentations.html')
+
+@app.route('/elements')
+def elements():
+    return render_template('elements.html')
 
 
 class Weapon(Resource):
@@ -184,11 +218,11 @@ class Character(Resource):
             traceback.print_exc()
 
 
-api.add_resource(Weapon, '/api/weapons', endpoint='weapons')
-api.add_resource(Character, '/api/characters', endpoint='characters')
-api.add_resource(Artifact, '/api/artifacts', endpoint='artifacts')
+api.add_resource(Weapon, '/api/weapons', endpoint='api/weapons')
+api.add_resource(Character, '/api/characters', endpoint='api/characters')
+api.add_resource(Artifact, '/api/artifacts', endpoint='api/artifacts')
 
 if __name__ == '__main__':
-    certs = ('cert.pem', 'key.pem')
-    #app.run()
-    app.run(host=yaml_data['HOST'], port=yaml_data['PORT'], ssl_context=certs)
+    certs = ('auths/cert.pem', 'auths/key.pem')
+    app.run()
+    # app.run(host=yaml_data['HOST'], port=yaml_data['PORT'], ssl_context=certs)

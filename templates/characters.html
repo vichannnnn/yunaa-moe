@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Yuna - Characters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+	</head>
+    <div id="loader">
+	    <picture>
+	      <img class="limg" src="/static/images/loading.gif" alt="">
+	    </picture>
+	</div>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<span class="symbol"><img src="/static/images/Element_Electro.svg" alt="" /></span><span class="title">Yuna</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/about">About</a></li>
+                            <li><a href="/getting_started">Getting Started</a></li>
+							<li><a href="/documentations">Documentations</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Characters</h1>
+                            <h2>Character HTTP GET Request Method</h2>
+                            <p>Gets the data of all the available playable characters.</p>
+                            <pre><code>GET https://yunaa.moe/api/characters/</code></pre>
+                            <h2>Parameterized Characters HTTP GET Request Method</h2>
+                            <p>Gets the data of a specific playable character.</p>
+                            <p>Currently, the supported parameters are:</p>
+                            <!-- Table -->
+								<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Parameter</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>name</td>
+													<td>Name of the character.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                </section>
+                            <h3>Example Request</h3>
+                            <pre><code>GET https://yunaa.moe/api/characters?name=Hu_Tao</code></pre>
+                            <h3>Example Response</h3>
+                            <pre><code>{
+"characterName": "Hu Tao",
+"wikiLink": "/wiki/Hu_Tao",
+"imageLink": "https://static.wikia.nocookie.net/gensin-impact/images/a/a4/Character_Hu_Tao_Thumb.png/revision/latest/scale-to-width-down/50?cb=20210228210611",
+"rarityLevel": "5 Stars",
+"weaponType": "Polearm",
+"characterVision": "Pyro",
+"secondaryStats": "CRIT DMG",
+"characterStats": [
+{"Level": "20/20", "HP": "3,141", "Attack": "21", "DEF": "177", "Secondary Stats": "\u2014"},
+{"Level": "40/40", "HP": "6,253", "Attack": "43", "DEF": "352", "Secondary Stats": "\u2014"},
+{"Level": "50/50", "HP": "8,042", "Attack": "55", "DEF": "453", "Secondary Stats": "9.6%"},
+{"Level": "60/60", "HP": "10,089", "Attack": "69", "DEF": "568", "Secondary Stats": "19.2%"},
+{"Level": "70/70", "HP": "11,899", "Attack": "81", "DEF": "670", "Secondary Stats": "19.2%"},
+{"Level": "80/80", "HP": "13,721", "Attack": "94", "DEF": "773", "Secondary Stats": "28.8%"},
+{"Level": "90/90", "HP": "15,552", "Attack": "106", "DEF": "876", "Secondary Stats": "38.4%"}
+]
+}</code></pre>
+                             <h3>Response Parameters</h3>
+                                    <!-- Table -->
+								<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Type</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>characterName</td>
+													<td>Name of the character.</td>
+												</tr>
+                                            <tr>
+													<td>wikiLink</td>
+													<td>The Genshin Wikia link of the character.</td>
+												</tr>
+                                            <tr>
+													<td>imageLink</td>
+													<td>The image of the character.</td>
+												</tr>
+                                            <tr>
+													<td>rarityLevel</td>
+													<td>The rarity star of the character.</td>
+												</tr>
+                                            <tr>
+													<td>weaponType</td>
+													<td>The type of weapon that the character wields.</td>
+												</tr>
+                                            <tr>
+													<td>characterVision</td>
+													<td>The vision of the character.</td>
+												</tr>
+                                            <tr>
+													<td>secondaryStats</td>
+													<td>The secondary attribute of the character apart from the default ATK.</td>
+												</tr>
+                                            <tr>
+													<td>characterStats</td>
+													<td>A list of the detailed scaling range for every level tier and their respective base ATK, DEF, HP secondary stats from level 1 to 90.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                </section>
+                        </div>
+                        </div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/vichannnnn/yunaa-moe" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Violet Cloud. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Yuna - Weapons</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+	</head>
+    <div id="loader">
+	    <picture>
+	      <img class="limg" src="/static/images/loading.gif" alt="">
+	    </picture>
+	</div>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/" class="logo">
+									<span class="symbol"><img src="/static/images/Element_Electro.svg" alt="" /></span><span class="title">Yuna</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/about">About</a></li>
+                            <li><a href="/getting_started">Getting Started</a></li>
+							<li><a href="/documentations">Documentations</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Weapons</h1>
+                            <h2>Weapon HTTP GET Request Method</h2>
+                            <p>Gets the data of all the available weapons.</p>
+                            <pre><code>GET https://yunaa.moe/api/weapons/</code></pre>
+                            <h2>Parameterized Weapon HTTP GET Request Method</h2>
+                            <p>Gets the data of a specific weapon.</p>
+                            <p>Currently, the supported parameters are:</p>
+                            <!-- Table -->
+								<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Parameter</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>name</td>
+													<td>Name of the weapon.</td>
+												</tr>
+                                            <tr>
+													<td>type</td>
+													<td>The weapon type e.g. <code>Claymores</code></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+                                </section>
+                            <h3>Example Request</h3>
+                            <pre><code>GET https://yunaa.moe/api/weapons?name=Staff_of_Homa</code></pre>
+                            <h3>Example Response</h3>
+                            <pre><code>{
+"weaponName": "Staff of Homa",
+"weaponType": "Polearms",
+"secondaryStats": "CRIT DMG",
+"baseAttackRange": "46 - 608",
+"secondaryRange": "14.4% - 66.2%",
+"weaponStats": [{"Level": "20/20", "Attack": "122", "Secondary Stats": "25.4%"},
+{"Level": "40/40", "Attack": "235", "Secondary Stats": "37.1%"},
+{"Level": "50/50", "Attack": "308", "Secondary Stats": "42.9%"},
+{"Level": "60/60", "Attack": "382", "Secondary Stats": "48.7%"},
+{"Level": "70/70", "Attack": "457", "Secondary Stats": "54.5%"},
+{"Level": "80/80", "Attack": "532", "Secondary Stats": "60.3%"},
+{"Level": "90/90", "Attack": "608", "Secondary Stats": "66.2%"}],
+"effectName": "Reckless Cinnabar",
+"effectDescription": "HP increased by 20~40%. Additionally, provides an ATK Bonus based on 0.8~1.6% of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK bonus is increased by an additional 1~1.8% of Max HP.\n",
+"imageLink": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Staff_of_Homa.png/revision/latest/scale-to-width-down/60?cb=20210225200935"
+}</code></pre>
+                             <h3>Response Parameters</h3>
+                                    <!-- Table -->
+								<section>
+									<se class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Type</th>
+													<th>Description</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>weaponName</td>
+													<td>Name of the weapon.</td>
+												</tr>
+                                            <tr>
+													<td>weaponType</td>
+													<td>Type of the weapon.</td>
+												</tr>
+                                            <tr>
+													<td>secondaryStats</td>
+													<td>The secondary attribute of the weapon apart from the default ATK.</td>
+												</tr>
+                                            <tr>
+													<td>baseAttackRange</td>
+													<td>The scaling range of the base attack from level 1 to 90.</td>
+												</tr>
+                                            <tr>
+													<td>secondaryRange</td>
+													<td>The scaling range of <code>secondaryStats</code> from level 1 to 90. </td>
+												</tr>
+                                            <tr>
+													<td>weaponStats</td>
+													<td>A list of the detailed scaling range for every level tier and their respective base attack and secondary stats from level 1 to 90.</td>
+												</tr>
+                                            <tr>
+													<td>effectName</td>
+													<td>Title name of the weapon's <code>effectDescription</code>.</td>
+												</tr>
+                                            <tr>
+													<td>effectDescription</td>
+													<td>Description of the weapon's effect.</td>
+												</tr>
+                                            <tr>
+													<td>imageLink</td>
+													<td>Image link of the weapon.</td>
+												</tr>
+											</tbody>
+										</table>
+                                </section>
+                        </div>
+                    </div>
+
+
+				                <!-- Footer -->
+				                	<footer id="footer">
+				                		<div class="inner">
+				                			<section>
+				                				<h2>Follow</h2>
+				                				<ul class="icons">
+				                					<li><a href="https://github.com/vichannnnn/yunaa-moe" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+				                				</ul>
+				                			</section>
+				                			<ul class="copyright">
+				                				<li>&copy; Violet Cloud. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				                			</ul>
+				                		</div>
+				                	</footer>
+
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>
