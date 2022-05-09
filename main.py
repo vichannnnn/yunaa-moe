@@ -8,6 +8,7 @@ from Database import Database
 from urllib.parse import unquote
 import ast
 import yaml
+import time
 
 with open("credentials.yaml", "r", encoding="utf8") as stream:
     yaml_data = yaml.safe_load(stream)
@@ -54,39 +55,6 @@ def stats_parser(header: [], lst_of_lst: []):
         lst[n] = dict(new_data)
 
     return lst
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/characters')
-def characters():
-    return render_template('characters.html')
-
-@app.route('/weapons')
-def weapons():
-    return render_template('weapons.html')
-
-@app.route('/artifacts')
-def artifacts():
-    return render_template('artifacts.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/getting_started')
-def getting_started():
-    return render_template('getting_started.html')
-
-@app.route('/documentations')
-def documentations():
-    return render_template('documentations.html')
-
-@app.route('/elements')
-def elements():
-    return render_template('elements.html')
 
 
 class Weapon(Resource):
@@ -222,7 +190,6 @@ api.add_resource(Weapon, '/api/weapons', endpoint='api/weapons')
 api.add_resource(Character, '/api/characters', endpoint='api/characters')
 api.add_resource(Artifact, '/api/artifacts', endpoint='api/artifacts')
 
-if __name__ == '__main__':
-    certs = ('auths/cert.pem', 'auths/key.pem')
-    app.run()
-    # app.run(host=yaml_data['HOST'], port=yaml_data['PORT'], ssl_context=certs)
+if __name__ == "__main__":
+    cert = ('auths/cert.pem', 'auths/key.pem')
+    app.run(host=yaml_data['HOST'], port=80, ssl_context=cert)
