@@ -14,7 +14,9 @@ c.execute(
     weaponStats TEXT,
     effectName TEXT,
     effectDescription TEXT,
-    imageLink TEXT
+    imageLink TEXT,
+    multiWishLink TEXT,
+    fullImageLink TEXT
     )''')
 
 c.execute(
@@ -25,7 +27,9 @@ c.execute(
     rarityLevel TEXT,
     weaponType TEXT,
     characterVision TEXT,
-    characterStats TEXT
+    characterStats TEXT,
+    multiWishLink TEXT,
+    fullImageLink TEXT
     )''')
 
 c.execute(
