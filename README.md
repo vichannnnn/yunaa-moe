@@ -5,6 +5,9 @@ Minimalist RESTful API for retrieving essential Genshin Impact data such as char
 
 Check out the API's [Wiki](https://github.com/vichannnnn/yunaa-moe/wiki) page to get started on Yuna API.
 Alternatively, you can also check out our [website](https://yunaa.moe)!
+
+NOTE: We will be using `https:yunaa.moe:80/api` instead of `https:yunaa.moe/api` for Yuna temporarily, this supercedes all other documentation found on the website and examples!
+
 ## Credits
 
 This API gathered data from the following sources:
